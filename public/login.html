@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+ <div class="box">
+
+    <div class="continer">
+        <h1>Login</h1>
+        <form action="http://localhost:3000/getdata" method="post" enctype="application/json">
+        <label for="email">Email:</label> <br>
+        <input type="text" name="user_name" placeholder="Enter the Email or Phone number"><br>
+        <label for="password" >Password:</label> <br>
+        <input type="password" name="password" id="check" placeholder="Enter the password"><br>
+        <input type="checkbox" onclick="myFunction()"> Show Password <br>
+        <input type="submit">
+      </form>
+        <h4>If you don't have an account <a href="Register.html"> Register here</a> </h4>
+    </div>
+</div>
+<script>
+    function myFunction() {
+    let x = document.getElementById("check");
+     if (x.type == "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+</body>
+</html>
